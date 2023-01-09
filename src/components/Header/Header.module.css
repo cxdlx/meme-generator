@@ -1,0 +1,51 @@
+:root {
+    --gradient: linear-gradient(
+        90deg,
+        #9506EC,
+        #CF2975,
+        #FF5108,
+        #CF2975,
+        #9506EC
+    );
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 5px 5px 0 0;
+    color: white;
+
+    animation: bg-animation 20s infinite alternate;
+    background-image: var(--gradient); 
+    background-size: 400%;
+}
+
+.title {
+    display: flex;
+    margin: 0;
+}
+
+.title img {
+    width: 50px;
+    border-radius: 25%;
+    align-self: center;
+}
+
+.title h1 {
+    margin-left: 10px;
+}
+
+span  {
+    white-space: nowrap;
+}
