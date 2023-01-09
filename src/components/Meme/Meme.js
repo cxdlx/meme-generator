@@ -5,8 +5,8 @@ function Meme() {
         <div className={classes.container}>
             <form>
                 <div className={classes.input__container}>
-                    <input placeholder='Shut up'/>
-                    <input placeholder='and take my money'/>
+                    <input type='text' placeholder='Shut up'/>
+                    <input type='text' placeholder='and take my money'/>
                 </div>
                 <button type='submit'>Generate</button>
             </form>

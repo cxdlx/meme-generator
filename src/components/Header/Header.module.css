@@ -40,6 +40,13 @@ nav {
     width: 50px;
     border-radius: 25%;
     align-self: center;
+    transition: ease-out 0.2s;
+}
+
+.title img:hover {
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .title h2 {
