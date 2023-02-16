@@ -20,6 +20,7 @@
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: 0;
     background-color: #151515;
@@ -29,7 +30,7 @@
 
 .memes__form {
     width: 80%;
-    margin: 0;
+    margin: auto;
 }
 
 .input__container {
@@ -65,4 +66,11 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+.meme__Image {
+    align-self: center;
+    width: 80%;
+    margin: 50px 0 25px 0;
+    border-radius: 5px;
 }

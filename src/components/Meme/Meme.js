@@ -1,13 +1,24 @@
 import classes from './Meme.module.css';
 import memesData from '../../memesData';
+import {useState} from 'react';
 
 function Meme() {
+    const [meme, setMeme] = useState({
+        topText: '',
+        bottomText: '',
+        randomImage: ''
+    })
+
+    const [allMemeImages, setAllMemeImages] = useState(memesData)
 
     function getMemeImage() {
-        const memesArray = memesData.data.memes
+        const memesArray = allMemeImages.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
         const url = memesArray[randomNumber].url
-        console.log(url)
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            randomImage: url   
+        }))
     }
     
     return (
@@ -19,6 +30,7 @@ function Meme() {
                 </div>
                 <button onClick={getMemeImage}>Generate</button>
             </div>
+            <img className={classes.meme__Image} src={meme.randomImage} alt='meme'/>
         </div>
     )
 }
