@@ -5,7 +5,7 @@ function Header() {
     return(
         <nav className={classes}>
             <div className={classes.title}>
-                <img src={Wutao} alt='Logo'/>
+                <a href='https://github.com/cxdlx'><img src={Wutao} alt='Logo'/></a>
                 <h2>Meme Generator</h2>
             </div>
             <span>React Project</span>
